@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="text-left">
+    <h1 class="text-center">Исходные данные</h1>
+    <form action="/Home/Result">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Название параметра</th>
+                    <th scope="col">ДП1</th>
+                    <th scope="col">ДП2</th>
+                    <th scope="col">ДП3</th>
+                    <th scope="col">ДП4</th>
+                    <th scope="col">ДП5</th>
+                    <th scope="col">ДП6</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Расход природного газа в базовом периоде, м3/ч</th>
+                    <td><input class="input-group input-group-text" type="number" name="data.Rate_PG_Base[0]" value="15000"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Rate_PG_Base[1]" value="17000"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Rate_PG_Base[2]" value="11000"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Rate_PG_Base[3]" value="13000"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Rate_PG_Base[4]" value="12000"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Rate_PG_Base[5]" value="15000"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">Расход кокса в базовом периоде, т/час</th>
+                    <td><input class="input-group input-group-text" type="number" name="data.Rate_Koks_Base[0]" value="64.25"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Rate_Koks_Base[1]" value="66.76"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Rate_Koks_Base[2]" value="56.08"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Rate_Koks_Base[3]" value="49.78"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Rate_Koks_Base[4]" value="62.92"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Rate_Koks_Base[5]" value="60.02"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">Эквивалент замены кокса в базовом периоде, кг кокса /(м3 ПГ)</th>
+                    <td><input class="input-group input-group-text" type="number" name="data.Equiv_Replacement[0]" value="0.59"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Equiv_Replacement[1]" value="0.53"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Equiv_Replacement[2]" value="0.85"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Equiv_Replacement[3]" value="0.59"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Equiv_Replacement[4]" value="0.75"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Equiv_Replacement[5]" value="0.79"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">Производительность по чугуну в базовом периоде, т /ч</th>
+                    <td><input class="input-group input-group-text" type="number" name="data.Performance[0]" value="146.4"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Performance[1]" value="136.4"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Performance[2]" value="134.3"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Performance[3]" value="122.3"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Performance[4]" value="138.2"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Performance[5]" value="138.8"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">Содержание S в чугуне в базовом периоде, %</th>
+                    <td><input class="input-group input-group-text" type="number" name="data.Content_S[0]" value="0.015"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Content_S[1]" value="0.014"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Content_S[2]" value="0.013"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Content_S[3]" value="0.014"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Content_S[4]" value="0.017"/></td>
+                    <td><input class="input-group input-group-text" type="number" name="data.Content_S[5]" value="0.016"/></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Наименование показателя</th>
+                    <th scope="col">Величина</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Стоимость кокса, руб/(кг кокса)</th>
+                    <td><input class="input-group input-group-text" type="number" name="data.Koks_Cost" value="1.8"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">Стоимость природного газа, руб/(м3 ПГ)</th>
+                    <td><input class="input-group input-group-text" type="number" name="data.PG_Cost" value="0.6"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">Резерв по расходу природного газа в целом по цеху, м3/ч </th>
+                    <td><input class="input-group input-group-text" type="number" name="data.Reserv_PG" value="105000"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">Запасы кокса по цеху, т/ч</th>
+                    <td><input class="input-group input-group-text" type="number" name="data.Reserv_Koks" value="350"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">Требуемое производство чугуна в цехе, т/ ч</th>
+                    <td><input class="input-group input-group-text" type="number" name="data.Performance_Required" value="800"/></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-outline-primary">Вычислить результат</button>
+        <button type="reset" class="btn btn-outline-primary">Очистить</button>
+    </form>
+</div>

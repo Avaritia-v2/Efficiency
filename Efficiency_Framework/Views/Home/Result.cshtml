@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Result";
+}
+
+<div class="text-left">
+    <div class="text-center">
+        <h4>Результат расчета</h4>
+    </div>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Название параметра</th>
+                <th scope="col">ДП1</th>
+                <th scope="col">ДП2</th>
+                <th scope="col">ДП3</th>
+                <th scope="col">ДП4</th>
+                <th scope="col">ДП5</th>
+                <th scope="col">ДП6</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Расход природного газа, м3/ч</th>
+                <td><output name="Rate_PG[0]">@Model.Rate_PG[0]</output></td>
+                <td><output name="Rate_PG[1]">@Model.Rate_PG[1]</output></td>
+                <td><output name="Rate_PG[2]">@Model.Rate_PG[2]</output></td>
+                <td><output name="Rate_PG[3]">@Model.Rate_PG[3]</output></td>
+                <td><output name="Rate_PG[4]">@Model.Rate_PG[4]</output></td>
+                <td><output name="Rate_PG[5]">@Model.Rate_PG[5]</output></td>
+            </tr>
+        </tbody>
+    </table>
+    <form action="/Home/Index">
+        <button type="submit" class="btn btn-outline-warning">Изменить входные параметры</button>
+    </form>
+</div>
+
